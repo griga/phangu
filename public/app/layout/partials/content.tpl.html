@@ -1,0 +1,19 @@
+<div id="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div id="playback" ng-controller="PlaybackCtrl">
+                <div class="btn-group">
+                    <button class="btn btn-primary" ng-click="play()"
+                            ng-class="{active: state=='play'}"><i class="glyphicon glyphicon-play"></i>
+                    </button>
+                    <button class="btn btn-warning" ng-click="pause()"
+                            ng-class="{active: state=='pause'}"><i
+                            class="glyphicon glyphicon-pause"></i></button>
+                </div>
+            </div>
+
+            <div id="viewport" spread>
+            </div>
+        </div>
+    </div>
+</div>

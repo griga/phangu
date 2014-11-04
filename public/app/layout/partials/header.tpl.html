@@ -1,0 +1,16 @@
+<nav id="navigation" class="navbar navbar-inverse" role="navigation" ng-init="expanded=false">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" ng-click="expanded=!expanded">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">PhaserJS &amp; AngularJS</a>
+    </div>
+    <div class="navbar-collapse collapse" ng-class="{in: expanded}" aria-expanded="{{expanded}}">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Home</a></li>
+        </ul>
+    </div>
+</nav>

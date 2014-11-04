@@ -1,0 +1,14 @@
+@import "lib/bootstrap/navbar";
+
+.navbar{
+    margin-bottom: 0;
+}
+@media (max-width: $grid-float-breakpoint) {
+    .navbar-collapse.collapse {
+        height: 1px;
+        &.in {
+            height: auto;
+        }
+    }
+
+}
