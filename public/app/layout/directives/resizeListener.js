@@ -66,7 +66,7 @@ define(['app', 'lodash'], function (app, _) {
                 }
 
                 var contentResizeStart = _.debounce( function (){
-                    console.log('contentResizeStart', calcWidth, calcHeight);
+                    //console.log('contentResizeStart', calcWidth, calcHeight);
                     $rootScope.$broadcast('contentResizeStart', {
                         width: calcWidth,
                         height: calcHeight,
@@ -76,7 +76,7 @@ define(['app', 'lodash'], function (app, _) {
                 }, 250, {leading: true});
 
                 var contentResizeEnd = _.debounce( function (){
-                    console.log('contentResizeEnd', calcWidth, calcHeight);
+                    //console.log('contentResizeEnd', calcWidth, calcHeight);
                     $rootScope.$broadcast('contentResizeEnd', {
                         width: calcWidth,
                         height: calcHeight,
