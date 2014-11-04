@@ -1,9 +1,12 @@
-var express = require('express');
+var express = require('express'),
+    app = express();
 
-var app = express();
 
-app.use(express.static(__dirname + '/../public'));
+var env = process.env.OPENSHIFT_NODEJS_PORT ? 'production' : 'development',
+    config = require('./config/config')[env];
 
-app.listen(4442, function(){
-    console.log('phangu on ', 4442);
+require('./config/express')(app, config);
+
+var server = app.listen(config.port, config.host, function () {
+    console.log('Phangu started on: ' + config.port);
 });
